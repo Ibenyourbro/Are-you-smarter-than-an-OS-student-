@@ -3,10 +3,6 @@ const findOrCreate = require('mongoose-findorcreate');
 
 const Schema = mongoose.Schema;
 
-const dailySchema = new Schema({
-  played: Boolean,
-});
-
 const userSchema = new Schema(
   {
     username: {
@@ -43,7 +39,6 @@ const userSchema = new Schema(
       type: Number,
       default: 0,
     },
-    daily: {},
   },
   {
     timestamps: true,
