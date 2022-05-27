@@ -2,7 +2,7 @@ const passport = require('passport');
 const router = require('express').Router();
 require('dotenv').config();
 //uncomment for local testing. Remember to comment when pushing to main branch.
-const CLIENT_URL = `${process.env.CLIENT_URL}`; //:${process.env.PORT}`;
+const CLIENT_URL = `${process.env.CLIENT_URL}`;//:${process.env.PORT}`;
 
 router.get('/login/success', (req, res) => {
   if (req.user) {

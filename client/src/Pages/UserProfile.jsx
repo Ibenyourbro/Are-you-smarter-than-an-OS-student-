@@ -85,14 +85,20 @@ const UserProfile = ({ user, getUser, editable }) => {
               <br></br>
               Games Played : {user.totalGames} <br></br>
               Win Percentage :
-              {' ' + Math.round((user.wins / user.totalGames) * 100) + '%'}
+              {Math.round((user.wins / user.totalGames) * 100) > 0
+                ? ' ' + Math.round((user.wins / user.totalGames) * 100) + '%'
+                : ' -'}
               <br></br>
               Question Correct : {user.qCorrect}
               <br></br>
               Question Attempted : {user.qAttempted}
               <br></br>
               Percent Correct :
-              {' ' + Math.round((user.qCorrect / user.qAttempted) * 100) + '%'}
+              {Math.round((user.qCorrect / user.qAttempted) * 100)
+                ? ' ' +
+                  Math.round((user.qCorrect / user.qAttempted) * 100) +
+                  '%'
+                : ' -'}
               <br></br>
             </div>
           ) : (
